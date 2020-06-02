@@ -125,6 +125,7 @@
   },
   "defaultProject": "estimator",
   "cli": {
-    "analytics": "b40e7e17-b2ae-4015-8847-033563aa8555"
+    "analytics": "b40e7e17-b2ae-4015-8847-033563aa8555",
+    "defaultCollection": "@ngrx/schematics"
   }
 }

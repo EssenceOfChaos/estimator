@@ -1,1 +1,20 @@
-<p>home works!</p>
+<h1>Home Page</h1>
+<p>In production? {{ prod }}</p>
+
+<mat-form-field appearance="standard" class="address_form">
+  <mat-label>Address</mat-label>
+  <input matInput [(ngModel)]="address" placeholder="Address" />
+  <mat-icon matSuffix>home</mat-icon>
+  <mat-hint>Hint</mat-hint>
+</mat-form-field>
+
+<br />
+
+<button
+  mat-raised-button
+  type="submit"
+  class="btn btn-success"
+  (click)="onSubmit(address)"
+>
+  Submit
+</button>
