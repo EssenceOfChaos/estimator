@@ -18,10 +18,16 @@ export class PropertyService {
   constructor(private http: HttpClient) {}
 
   getPropertyData(address) {
-    return this.http.get(`${this.base_uri}?${this.ZWSID}&address=`).pipe(
-      retry(2), // retry a failed request up to 3 times
-      catchError(this.handleError) // then handle the error
-    );
+    console.log(address);
+    console.log(address.value);
+    if (address.status === 'VALID') {
+      console.log('valid FormGroup');
+    }
+    return new Observable();
+    // return this.http.get(`${this.base_uri}?${this.ZWSID}&address=`).pipe(
+    //   retry(2), // retry a failed request up to 3 times
+    //   catchError(this.handleError) // then handle the error
+    // );
   }
 
   private handleError(error: HttpErrorResponse) {
